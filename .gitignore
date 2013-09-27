@@ -75,3 +75,9 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+
+# extra
+build/
+workspace/
+dist/
