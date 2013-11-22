@@ -668,7 +668,7 @@ public class PrototestTC_Web extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel14.setText("#Form Test Cases:");
+        jLabel14.setText("#Form items:");
 
         forms.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         forms.setText("123456");
@@ -1300,7 +1300,11 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                       this.initialProject = new Project(this.currentProject);
                       JOptionPane.showMessageDialog(null, "Changes is saved successfully.");
                       
-                      displayProjectOnFrame();
+                    if (fetchedweb != null) fetchedweb = null; 
+                    if(hierarcyTree != null) hierarcyTree = null;
+                    if(FormElements != null) FormElements = null;
+                    
+                    displayProjectOnFrame();
 
                   } catch (IOException ex) {
                   }
@@ -1320,6 +1324,10 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                   }
               } 
            }
+    if (fetchedweb != null) fetchedweb = null; 
+    if(hierarcyTree != null) hierarcyTree = null;
+    if(FormElements != null) FormElements = null;
+       
      this.currentProject = null;
      this.initialProject = null;        
      displayProjectOnFrame();
@@ -1353,6 +1361,9 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                }
               }            
         }
+    if (fetchedweb != null) fetchedweb = null; 
+    if(hierarcyTree != null) hierarcyTree = null;
+    if(FormElements != null) FormElements = null;
     this.currentProject = null;
     this.initialProject = null;
     displayProjectOnFrame();
@@ -1371,6 +1382,10 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                }
               } 
         }
+       
+    if (fetchedweb != null) fetchedweb = null; 
+    if(hierarcyTree != null) hierarcyTree = null;
+    if(FormElements != null) FormElements = null;       
    this.currentProject = null;
    this.initialProject = null;
    displayProjectOnFrame();
@@ -1385,6 +1400,9 @@ public class PrototestTC_Web extends javax.swing.JFrame {
          return;
         }
 
+        if (fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
         
             if (JOptionPane.showConfirmDialog(null,"Deleting "+ this.currentProject.getWebSites().get(WebsitesList.getSelectedRow()).getURL() +". Are you sure??",
               "ProtoTest TG- Remove Website ...", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){     
@@ -1415,7 +1433,12 @@ public class PrototestTC_Web extends javax.swing.JFrame {
 
     private void NewWebsiteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewWebsiteButtonActionPerformed
         if(this.currentProject != null){
-           NewWebsite();
+            
+        if (fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
+
+        NewWebsite();
            projectUpdate();
            displayProjectOnFrame();               
         }       
@@ -1519,7 +1542,12 @@ public class PrototestTC_Web extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Please, open a project and select website first");
            return;
         }
-            
+
+        if (fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
+        
+        
             String Command1 = "sh " + "\""+ currentProject.getProjectPath()+ "/" + CurrentScript.getText().trim() + "Compile.sh\"" ;
             
             try {
@@ -1562,7 +1590,11 @@ public class PrototestTC_Web extends javax.swing.JFrame {
            return;
         }
 
-          File path = new File(this.getWorkDir());
+        if (fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
+
+        File path = new File(this.getWorkDir());
           JFileChooser chooser = new JFileChooser();
           chooser.setDialogTitle("PrototestTC- Load script file");              
           chooser.setCurrentDirectory(path);

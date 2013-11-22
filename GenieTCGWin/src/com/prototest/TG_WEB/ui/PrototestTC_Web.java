@@ -1305,6 +1305,10 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                       this.initialProject = null;
                       this.initialProject = new Project(this.currentProject);
                       JOptionPane.showMessageDialog(null, "Changes is saved successfully.");
+
+                    if(fetchedweb != null) fetchedweb = null; 
+                    if(hierarcyTree != null) hierarcyTree = null;
+                    if(FormElements != null) FormElements = null;
                       
                       displayProjectOnFrame();
 
@@ -1326,6 +1330,11 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                   }
               } 
            }
+
+    if(fetchedweb != null) fetchedweb = null; 
+    if(hierarcyTree != null) hierarcyTree = null;
+    if(FormElements != null) FormElements = null;
+              
      this.currentProject = null;
      this.initialProject = null;        
      displayProjectOnFrame();
@@ -1359,6 +1368,11 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                }
               }            
         }
+       
+    if(fetchedweb != null) fetchedweb = null; 
+    if(hierarcyTree != null) hierarcyTree = null;
+    if(FormElements != null) FormElements = null;
+       
     this.currentProject = null;
     this.initialProject = null;
     displayProjectOnFrame();
@@ -1377,6 +1391,11 @@ public class PrototestTC_Web extends javax.swing.JFrame {
                }
               } 
         }
+       
+    if(fetchedweb != null) fetchedweb = null; 
+    if(hierarcyTree != null) hierarcyTree = null;
+    if(FormElements != null) FormElements = null;
+       
    this.currentProject = null;
    this.initialProject = null;
    displayProjectOnFrame();
@@ -1391,6 +1410,9 @@ public class PrototestTC_Web extends javax.swing.JFrame {
          return;
         }
 
+        if(fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
         
             if (JOptionPane.showConfirmDialog(null,"Deleting "+ this.currentProject.getWebSites().get(WebsitesList.getSelectedRow()).getURL() +". Are you sure?",
               "ProtoTest TG- Remove Website ...", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){     
@@ -1421,6 +1443,11 @@ public class PrototestTC_Web extends javax.swing.JFrame {
 
     private void NewWebsiteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewWebsiteButtonActionPerformed
         if(this.currentProject != null){
+            
+        if(fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
+
            NewWebsite();
            projectUpdate();
            displayProjectOnFrame();               
@@ -1527,7 +1554,11 @@ public class PrototestTC_Web extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Please, open a project and select website first");
            return;
         }
-            
+
+        if (fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
+        
             String Command1 = "\""+ currentProject.getProjectPath()+ "\\" + CurrentScript.getText().trim() + "Compile.bat\"" ;
             
             try {
@@ -1570,6 +1601,10 @@ public class PrototestTC_Web extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Please, open a project and select website first");
            return;
         }
+
+        if (fetchedweb != null) fetchedweb = null; 
+        if(hierarcyTree != null) hierarcyTree = null;
+        if(FormElements != null) FormElements = null;
 
           File path = new File(this.getWorkDir());
           JFileChooser chooser = new JFileChooser();

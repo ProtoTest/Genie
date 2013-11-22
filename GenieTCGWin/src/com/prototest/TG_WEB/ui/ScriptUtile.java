@@ -169,7 +169,7 @@ public static void formtemsScriptRadios(String className, String workDir,  Strin
                                                      
 
                                 for(String oneRadiosGroup: GRadios){
-                                scriptData.add("selenium.type(\"id=" + oneRadiosGroup + "\");");                                 
+                                scriptData.add("selenium.click(\"id=" + oneRadiosGroup + "\");");                                 
                                 }
                                                              
                         scriptData.add("selenium.waitForPageToLoad(\""+ String.valueOf(loadTimeOut) +"\");");
@@ -186,7 +186,7 @@ public static void formtemsScriptRadios(String className, String workDir,  Strin
                                                      
 
                                 for(String oneRadiosGroup: GRadios){
-                                scriptData.add("selenium.type(\"id=" + oneRadiosGroup + "\");");                                 
+                                scriptData.add("selenium.click(\"id=" + oneRadiosGroup + "\");");                                 
                                 }
                                                              
                              
@@ -1085,7 +1085,7 @@ public static void formtemsScriptAll(String className, String workDir,  String b
                                 }
 
                                 for(String oneRadiosGroup: GRadios){
-                                scriptData.add("selenium.type(\"id=" + oneRadiosGroup + "\");");                                 
+                                scriptData.add("selenium.click(\"id=" + oneRadiosGroup + "\");");                                 
                                 }
                                                                                          
                         scriptData.add("selenium.waitForPageToLoad(\""+ String.valueOf(loadTimeOut) +"\");");
@@ -1134,7 +1134,7 @@ public static void formtemsScriptAll(String className, String workDir,  String b
                                 }
 
                                 for(String oneRadiosGroup: GRadios){
-                                scriptData.add("selenium.type(\"id=" + oneRadiosGroup + "\");");                                 
+                                scriptData.add("selenium.click(\"id=" + oneRadiosGroup + "\");");                                 
                                 }
                                                              
                              
@@ -1250,7 +1250,7 @@ public static void formtemsScriptAll(String className, String workDir,  String b
                                                              
 
                                 for(String oneRadiosGroup: GRadios){
-                                scriptData.add("selenium.type(\"id=" + oneRadiosGroup + "\");");                                 
+                                scriptData.add("selenium.click(\"id=" + oneRadiosGroup + "\");");                                 
                                 }
                                 
                                 scriptData.add("selenium.waitForPageToLoad(\""+ String.valueOf(loadTimeOut) +"\");");
@@ -1318,7 +1318,7 @@ public static void formtemsScriptAll(String className, String workDir,  String b
                                                              
 
                                 for(String oneRadiosGroup: GRadios){
-                                scriptData.add("selenium.type(\"id=" + oneRadiosGroup + "\");");                                 
+                                scriptData.add("selenium.click(\"id=" + oneRadiosGroup + "\");");                                 
                                 }
                                 
                                 if(button.contains("<id>")){                                    
